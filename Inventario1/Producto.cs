@@ -1,17 +1,18 @@
-﻿
-public class Producto
-{
-    public string Nombre { get; set; }
-    public decimal Precio { get; set; }
-
-    public Producto(string nombre, decimal precio)
+﻿namespace GestionInventario {
+    public class Producto
     {
-        Nombre = nombre;
-        Precio = precio;
-    }
+        public string Nombre { get; set; }
+        public decimal Precio { get; set; }
 
-    public override string ToString()
-    {
-        return $"{Nombre}: {Precio:C}"; // Formato de moneda
+        public Producto(string nombre, decimal precio)
+        {
+            Nombre = nombre;
+            Precio = precio;
+        }
+
+        public override string ToString()
+        {
+            return $"{Nombre}: {Precio:C}"; // Formato de moneda
+        }
     }
 }

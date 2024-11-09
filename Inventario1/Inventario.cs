@@ -20,7 +20,7 @@ namespace GestionInventario
             if (producto != null)
             {
                 producto.Precio = nuevoPrecio;
-                Console.WriteLine($"Precio actualizado: {nombre}"); // Esto ahora llamará a ToString()
+                Console.WriteLine($"Precio actualizado: {nombre}"); 
             }
             else
             {
@@ -57,7 +57,7 @@ namespace GestionInventario
             Console.WriteLine("Productos filtrados y ordenados:");
             foreach (var producto in productosFiltrados)
             {
-                Console.WriteLine(producto); // Esto ahora llamará a ToString()
+                Console.WriteLine(producto);
             }
         }
 
@@ -85,7 +85,7 @@ namespace GestionInventario
             }
 
             int cantidadProductos = productos.Count;
-            decimal promedioPrecios = productos.Average(p => p.Precio); // Cambiado a p.Precio
+            decimal promedioPrecios = productos.Average(p => p.Precio); 
             Producto productoCostoso = productos.OrderByDescending(p => p.Precio).FirstOrDefault();
             Producto productoEconomico = productos.OrderBy(p => p.Precio).FirstOrDefault();
 

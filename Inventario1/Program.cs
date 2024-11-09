@@ -18,7 +18,7 @@ namespace GestionInventario {
                 Console.WriteLine("3. Eliminar producto");
                 Console.WriteLine("4. Filtrar y ordenar productos");
                 Console.WriteLine("5. Contar y agrupar productos");
-                Console.WriteLine("6. Reporte resumido");
+                Console.WriteLine("6. Reporte");
                 Console.WriteLine("7. Salir");
                 Console.Write("Seleccione una opción: ");
                 string opcion = Console.ReadLine();
@@ -26,16 +26,16 @@ namespace GestionInventario {
                 switch (opcion)
                 {
                     case "1":
-                        Console.Write("Ingrese el nombre del producto: ");
+                        Console.Write("Digite el nombre del producto: ");
                         string nombre = Console.ReadLine();
-                        Console.Write("Ingrese el precio del producto: ");
+                        Console.Write("Digite el precio del producto: ");
                         if (decimal.TryParse(Console.ReadLine(), out decimal precio) && precio > 0)
                         {
                             inventario.AgregarProducto(new Producto(nombre, precio));
                         }
                         else
                         {
-                            Console.WriteLine("Precio inválido. Debe ser un número positivo.");
+                            Console.WriteLine("Precio incorrecto. Debe ser un número positivo.");
                         }
                         break;
 
@@ -49,7 +49,7 @@ namespace GestionInventario {
                         }
                         else
                         {
-                            Console.WriteLine("Precio inválido. Debe ser un número positivo.");
+                            Console.WriteLine("Precio incorrecto. Debe ser un número positivo.");
                         }
                         break;
 
@@ -67,7 +67,7 @@ namespace GestionInventario {
                         }
                         else
                         {
-                            Console.WriteLine("Precio inválido. Debe ser un número.");
+                            Console.WriteLine("Precio incorrecto. Debe ser un número.");
                         }
                         break;
 
